@@ -82,10 +82,11 @@
 
         <!-- Internodes Arrow logo -->
         <script src="{{ URL::asset('js/three.min.js') }}"></script>
-        <div id="arrowContainer" onclick="arrowIcon(this)" style="margin-left:10px; margin-top:10px;position:absolute;z-index:2;">
+
+        <!--<div id="arrowContainer" onclick="arrowIcon(this)" style="margin-left:10px; margin-top:10px;position:absolute;z-index:2;">
               <script src="./js/arrow.js" type="text/javascript"></script>
               <canvas width="200" height="200" style="width: 50px; height: 50px;"></canvas>
-            </div>
+            </div>-->
 
         <!-- The map -->
         <div id="map"></div>
@@ -143,8 +144,8 @@
       <script src="{{ URL::asset('js/toolkit.js') }}"></script>
       <script src="{{ URL::asset('js/application.js') }}"></script>
 
-      <!-- Custom Javascript -->
-      <script src="{{ URL::asset('js/arrow.js') }}" type="text/javascript"></script>
+      <!-- Custom Javascript 
+      <script src="{{ URL::asset('js/arrow.js') }}" type="text/javascript"></script>-->
 
       <!-- Execute/clear BS loaders for docs -->
       <script>

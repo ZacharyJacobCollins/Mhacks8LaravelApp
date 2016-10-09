@@ -10,7 +10,7 @@ function pollPosition() {
   xhttp.open("POST", "https://www.googleapis.com/geolocation/v1/geolocate?key="+mapsApiKey, true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("");
-  setTimeout("pollPosition()",2000);
+  setTimeout("pollPosition()", 10000);
 }
 
-// pollPosition();
+pollPosition();
