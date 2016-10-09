@@ -44,36 +44,13 @@
 
             <div class="collapse and" id="nav-toggleable-sm">
               <ul class="nav of nav-stacked">
-                  <li class="tq">Dashboards</li>
+                  <li class="tq">Node options</li>
                   <li class="active">
-                    <a href="https://bootstrap-themes.github.io/dashboard/index.html">Overview</a>
+                    <a href="#">Overview</a>
                   </li>
                   <li>
-                    <a href="https://bootstrap-themes.github.io/dashboard/order-history/index.html">Order history</a>
-                  </li>
-                  <li>
-                    <a href="https://bootstrap-themes.github.io/dashboard/fluid/index.html">Fluid layout</a>
-                  </li>
-                  <li>
-                    <a href="https://bootstrap-themes.github.io/dashboard/icon-nav/index.html">Icon nav</a>
-                  </li>
-                  <li class="tq">More</li>
-                  <li>
-                    <a href="https://bootstrap-themes.github.io/dashboard/docs/index.html">
-                      Toolkit docs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="http://getbootstrap.com/" target="blank">
-                      Bootstrap docs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://bootstrap-themes.github.io/dashboard/light/index.html">Light UI</a>
-                  </li>
-                  <li>
-                    <a href="https://bootstrap-themes.github.io/dashboard/#docsModal" data-toggle="modal">
-                      Example modal
+                    <a href="#docsModal" data-toggle="modal">
+                      Drop Node
                     </a>
                   </li>
               </ul>
@@ -104,7 +81,11 @@
         <div class="by">
 
         <!-- Internodes Arrow logo -->
-  	    <div id="arrowContainer" style="margin-left:10px; margin-top:10px;position:absolute;z-index:2;"><script src="{{ URL::asset('js/three.min.js') }}"></script></div>
+        <script src="{{ URL::asset('js/three.min.js') }}"></script>
+        <div id="arrowContainer" onclick="arrowIcon(this)" style="margin-left:10px; margin-top:10px;position:absolute;z-index:2;">
+              <script src="./js/arrow.js" type="text/javascript"></script>
+              <canvas width="200" height="200" style="width: 50px; height: 50px;"></canvas>
+            </div>
 
         <!-- The map -->
         <div id="map"></div>
@@ -129,10 +110,19 @@
 
           <div class="ri">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="modal-title" id="myModalLabel">Example modal</h4>
+            <h4 class="modal-title" id="myModalLabel">Drop a node</h4>
           </div>
           <div class="modal-body">
-            <p>You're looking at an example modal in the dashboard theme.</p>
+            <div class="dropdown open">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
           </div>
           <div class="rj">
             <button type="button" class="ce fh" data-dismiss="modal">Cool, got it!</button>
@@ -140,6 +130,9 @@
         </div>
       </div>
     </div>
+    <!-- /Modal -->
+
+
   </div><!-- end app-->
 
   </body>
@@ -163,7 +156,6 @@
 
       <!-- Google Maps -->
       <script src="{{ URL::asset('js/vue/vue-app.js') }}"></script>
-
 
       <!-- callback, LAST google maps script-->
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmDjLF1JlR93gIzz4vfVw7JCNYHY0HuTk&callback=app.init"></script>

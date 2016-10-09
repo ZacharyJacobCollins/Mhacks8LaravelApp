@@ -13,4 +13,4 @@ function pollPosition() {
   setTimeout("pollPosition()",10000);
 }
 
-pollPosition();
+// pollPosition();
