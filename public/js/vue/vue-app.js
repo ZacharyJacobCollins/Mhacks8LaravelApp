@@ -73,6 +73,11 @@ var app = new Vue({
                           this.pos = JSON.parse(event.data).location;   //Also returns an accuracy if wanted
                           console.log('updated position: ');
                           console.log( this.pos );
+
+                          infoWindow.setPosition(this.pos);
+                          infoWindow.setContent('Location lat: '+this.pos.lat+' lng: '+this.pos.lng);
+                          map.setCenter(this.pos);
+
                       };
                   } else {
                       console.log("No Web Worker support.");
