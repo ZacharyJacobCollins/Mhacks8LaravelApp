@@ -80,25 +80,29 @@
 
         <div class="by">
 
-        <!-- Internodes Arrow logo -->
-        <script src="{{ URL::asset('js/three.min.js') }}"></script>
+          <!-- Internodes Arrow logo -->
+          <script src="{{ URL::asset('js/three.min.js') }}"></script>
 
-        <!--<div id="arrowContainer" onclick="arrowIcon(this)" style="margin-left:10px; margin-top:10px;position:absolute;z-index:2;">
-              <script src="./js/arrow.js" type="text/javascript"></script>
-              <canvas width="200" height="200" style="width: 50px; height: 50px;"></canvas>
-            </div>-->
+          <!--<div id="arrowContainer" onclick="arrowIcon(this)" style="margin-left:10px; margin-top:10px;position:absolute;z-index:2;">
+                <script src="./js/arrow.js" type="text/javascript"></script>
+                <canvas width="200" height="200" style="width: 50px; height: 50px;"></canvas>
+              </div>-->
 
-        <!-- The map -->
-        <div id="map"></div>
-  	    <br>
+          <!-- The map -->
+          <div id="map"></div>
+    	    <br>
 
-        <!-- Events -->
-        <span v-for="node in nodes">
-          <h4 class="ty">Active Nodes</h4>
-        </span>
+          <button @click="dropnode" class="ce apn ame" style="margin-left: 40%;">Drop Node</button>
+          <br />
+          <br />
 
-        </div>
-          <a href="https://bootstrap-themes.github.io/dashboard/#" class="ce apn ame" style="margin: auto; left: 50%;">View all devices</a>
+
+          <!-- Events -->
+          <span v-for="node in nodes">
+            <h4 class="ty">@{{ node.title }}</h4>
+          </span>
+
+          </div>
 
           </div>
         </div>
@@ -144,7 +148,7 @@
       <script src="{{ URL::asset('js/toolkit.js') }}"></script>
       <script src="{{ URL::asset('js/application.js') }}"></script>
 
-      <!-- Custom Javascript 
+      <!-- Custom Javascript
       <script src="{{ URL::asset('js/arrow.js') }}" type="text/javascript"></script>-->
 
       <!-- Execute/clear BS loaders for docs -->

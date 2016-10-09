@@ -56,6 +56,9 @@ var app = new Vue({
                   center: { lat: pos.lat, lng: pos.lng },
                   zoom: 20
               });
+
+              this.map = map;
+              
               var infoWindow = new google.maps.InfoWindow({ map: map });
 
               infoWindow.setPosition(pos);
@@ -83,12 +86,17 @@ var app = new Vue({
                       console.log("No Web Worker support.");
                   }
               }
-
               //Boot the worker
               startWorker();
-
           }, function() {
               this.handleLocationError(true, infoWindow, map.getCenter());
+        },
+        dropnode: function() {
+          var marker = new google.maps.Marker({
+            position: this.pos,
+            map: this.map,
+            title: 'A new node',
+          });
         },
     },
 });
