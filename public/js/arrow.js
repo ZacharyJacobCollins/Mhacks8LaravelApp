@@ -85,7 +85,7 @@
   const renderer = new THREE.WebGLRenderer({alpha:true});
 
 
-  const plane = new LiquidPlane(100, 'img').init(scene);
+  const plane = new Plane(100, 'img').init(scene);
 
   function init() {
     setScene();
