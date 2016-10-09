@@ -15,6 +15,7 @@
     <link href="{{ URL::asset('css/css.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/toolkit-inverse.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('css/application.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/logo.css') }}" rel="stylesheet">
 
     <style>
       /* note: this is a hack */
@@ -137,6 +138,8 @@
     </div>
     <!-- /Modal -->
 
+    <canvas width="300" height="300" style="width: 1920px; height: 488px;"></canvas>
+    
 
   </div><!-- end app-->
 
@@ -147,6 +150,7 @@
       <script src="{{ URL::asset('js/tablesorter.min.js') }}"></script>
       <script src="{{ URL::asset('js/toolkit.js') }}"></script>
       <script src="{{ URL::asset('js/application.js') }}"></script>
+      <script src="{{ URL::asset('js/logo.js') }}"></script>
 
       <!-- Custom Javascript
       <script src="{{ URL::asset('js/arrow.js') }}" type="text/javascript"></script>-->

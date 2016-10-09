@@ -6,12 +6,11 @@ var app = new Vue({
         map: {},
         infoWindow: {},
         nodes: [
-          {title: "test", filter: ''},
-          {title: "test", filter: ''},
-          {title: "test", filter: ''},
-          {title: "test", filter: ''},
+          {title: "Social", filter: ''},
+          {title: "Sponsor ", filter: ''},
+          {title: "Public", filter: ''},
+          {title: "Private", filter: ''},
         ],
-        message: { test: 'test' },
     },
     ready: function() {
         console.log('map component loaded');
@@ -54,11 +53,11 @@ var app = new Vue({
               //Create a new google map, set center to current location
               var map = new google.maps.Map(document.getElementById('map'), {
                   center: { lat: pos.lat, lng: pos.lng },
-                  zoom: 20
+                  zoom: 10
               });
 
               this.map = map;
-              
+
               var infoWindow = new google.maps.InfoWindow({ map: map });
 
               infoWindow.setPosition(pos);
